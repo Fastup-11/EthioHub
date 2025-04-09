@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EthioHub Admin Panel</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+    <div class="admin-container">
+        <aside class="sidebar">
+            <h2>EthioHub Admin</h2>
+            <ul>
+                <li><a href="#dashboard" class="active">Dashboard</a></li>
+                <li><a href="#videos">Video Management</a></li>
+                <li><a href="#users">User Management</a></li>
+                <li><a href="#analytics">Analytics</a></li>
+                <li><a href="#settings">Settings</a></li>
+            </ul>
+        </aside>
+
+        <main class="content">
+            <header class="admin-header">
+                <h1>Admin Dashboard</h1>
+                <div class="admin-actions">
+                    <button id="logout-btn">Logout</button>
+                </div>
+            </header>
+
+            <section id="dashboard" class="tab-content active">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Total Videos</h3>
+                        <p class="stat-value">1,245</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Today's Views</h3>
+                        <p class="stat-value">24,532</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>New Users</h3>
+                        <p class="stat-value">342</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="videos" class="tab-content">
+                <h2>Video Management</h2>
+                <div class="video-management">
+                    <div class="video-list">
+                        <!-- Video list would be populated dynamically -->
+                    </div>
+                    <div class="video-upload">
+                        <h3>Upload New Video</h3>
+                        <form id="upload-form">
+                            <div class="form-group">
+                                <label for="video-title">Video Title</label>
+                                <input type="text" id="video-title" placeholder="Enter video title" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="video-desc">Description</label>
+                                <textarea id="video-desc" placeholder="Enter video description"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="video-file">Video File</label>
+                                <input type="file" id="video-file" accept="video/*" required>
+                            </div>
+                            <button type="submit">Upload</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
